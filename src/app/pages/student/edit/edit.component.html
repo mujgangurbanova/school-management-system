@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h2>{{ title }}</h2>
+
+  <form (ngSubmit)="onSubmit(studentForm)" #studentForm='ngForm' >
+    <div class="form-group">
+      <label for="studId">Kod</label>
+      <input  id="studId" type="number"  class="form-control" [ngModel]="student.studId" name="studId">
+    </div>
+    <div class="form-group">
+      <label for="firstname">Ad</label>
+      <input  id="firstname" type="text"  class="form-control" [ngModel]="student.firstName" name="firstName">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Soyad</label>
+      <input id="lastname" type="text"  class="form-control" [ngModel]="student.lastName" name="lastName">
+    </div>
+    <div class="form-group">
+      <label for="class">Sinif</label>
+      <input id="class" type="number"  class="form-control" [ngModel]="student.class" name="class">
+    </div>
+    <div class="form-group">
+     <button class="btn btn-primary" type="submit">Yadda saxla</button>
+    </div>
+  </form>
+</div>
+
+

@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h2>{{ title }}</h2>
+
+  <form (ngSubmit)="onSubmit(examForm)" #examForm='ngForm' >
+    <div class="form-group">
+      <label for="studId">Tələbə kod</label>
+      <input  id="studId" type="number"  class="form-control" [ngModel]="exam.studId" name="studId">
+    </div>
+    <div class="form-group">
+      <label for="courseCode">Dərsin kod</label>
+      <input  id="courseCode" type="text"  class="form-control" [ngModel]="exam.courseCode" name="courseCode">
+    </div>
+    <div class="form-group">
+      <label for="tarix">Tarix</label>
+      <input id="tarix" type="date"  class="form-control" [ngModel]="exam.tarix" name="tarix">
+    </div>
+    <div class="form-group">
+      <label for="grade">Nəticə</label>
+      <input id="grade" type="number"  class="form-control" [ngModel]="exam.grade" name="grade">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Yadda saxla</button>
+    </div>
+  </form>
+</div>
+
+

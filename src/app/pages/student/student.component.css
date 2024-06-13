@@ -1,0 +1,58 @@
+.title{
+  color: rgba(0, 0, 0, .9);
+}
+
+
+.table thead th {
+  text-align: center;
+}
+
+.addBtn {
+  margin-bottom: 10px;
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.table tbody td,
+.table tbody th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+.icons{
+  text-align: end;
+}
+
+.edit-icon{
+  margin-right: 5px;
+}

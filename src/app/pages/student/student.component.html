@@ -1,0 +1,29 @@
+<h2 class="title">Tələbələr</h2>
+<a routerLink="/student/add/0" class="btn btn-primary addBtn"> Əlavə et</a>
+<table class="table">
+  <thead>
+  <th>Kod</th>
+  <th>Ad</th>
+  <th>Soyad</th>
+  <th>Sinif</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of students">
+    <td>{{ student.studId }}</td>
+    <td>{{ student.firstName }}</td>
+    <td>{{ student.lastName }}</td>
+    <td>{{ student.class }}</td>
+    <td class="icons" >
+      <a class=" edit-icon btn btn-primary btn-sm" [routerLink]="['/student/edit', student.studId]">
+        <i class="bi bi-pencil"></i>
+      </a>
+
+
+      <button class="btn btn-danger btn-sm" (click)="deleteStudent(student.studId)">
+        <i class="bi bi-trash"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

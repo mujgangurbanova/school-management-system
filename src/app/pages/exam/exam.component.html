@@ -1,0 +1,29 @@
+<h2 class="title">Imtahanlar</h2>
+<a routerLink="/exam/add/0" class="btn btn-primary addBtn"> Əlavə et</a>
+<table class="table">
+  <thead>
+  <th> Dərsin kod</th>
+  <th>Tələbə kod</th>
+  <th>Tarix</th>
+  <th>Nəticə</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let exam of exams">
+    <td>{{ exam.courseCode }}</td>
+    <td>{{ exam.studId }}</td>
+    <td>{{ exam.tarix }}</td>
+    <td>{{ exam.grade }}</td>
+    <td class="icons" >
+      <a class=" edit-icon btn btn-primary btn-sm" [routerLink]="['/exam/edit', exam.studId]">
+        <i class="bi bi-pencil"></i>
+      </a>
+
+
+      <button class="btn btn-danger btn-sm" (click)="deleteStudent(exam.studId)">
+        <i class="bi bi-trash"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
