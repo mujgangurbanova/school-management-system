@@ -2,12 +2,7 @@ import {IStudent} from "./IStudent";
 
 export class StudentMockData {
   static mockList: IStudent[] = [
-    {
-      studId:1,
-      firstName:'Mujgan',
-      lastName:'Qurbanova',
-      class:11
-    }
+
   ];
 
   public static getStudList(): IStudent[] {

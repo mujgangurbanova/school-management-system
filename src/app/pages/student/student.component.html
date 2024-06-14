@@ -1,6 +1,9 @@
 <h2 class="title">Tələbələr</h2>
 <a routerLink="/student/add/0" class="btn btn-primary addBtn"> Əlavə et</a>
-<table class="table">
+<div *ngIf="students.length === 0" class="alert alert-info">
+  Məlumat yoxdur.
+</div>
+<table class="table"  *ngIf="students.length > 0">
   <thead>
   <th>Kod</th>
   <th>Ad</th>

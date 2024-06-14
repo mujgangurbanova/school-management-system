@@ -1,6 +1,10 @@
 <h2 class="title">Dərslər</h2>
+
 <a routerLink="/course/add/0" class="btn btn-primary addBtn"> Əlavə et</a>
-<table class="table">
+<div *ngIf="courses.length === 0" class="alert alert-info">
+  Məlumat yoxdur.
+</div>
+<table class="table"  *ngIf="courses.length > 0">
   <thead>
   <th>Dərsin kod</th>
   <th>Dərsin adı</th>

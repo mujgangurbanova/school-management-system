@@ -1,6 +1,9 @@
 <h2 class="title">Imtahanlar</h2>
 <a routerLink="/exam/add/0" class="btn btn-primary addBtn"> Əlavə et</a>
-<table class="table">
+<div *ngIf="exams.length === 0" class="alert alert-info">
+  Məlumat yoxdur.
+</div>
+<table class="table"  *ngIf="exams.length > 0">
   <thead>
   <th> Dərsin kod</th>
   <th>Tələbə kod</th>

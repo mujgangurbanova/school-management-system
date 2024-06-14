@@ -12,7 +12,7 @@ import {CourseMockData} from "../model/CourseMockData";
 export class CourseEditComponent implements OnInit {
   id?: string;
   title?: string;
-  errorMessage: string = '';
+ successMessage: string = '';
   course: ICourse = {
     courseCode: '',
     courseName: '',
@@ -39,7 +39,7 @@ export class CourseEditComponent implements OnInit {
 
 
   onSubmit(form: NgForm) {
-
+    this.successMessage = '';
     let course: ICourse = {
       courseCode: form.value.courseCode,
       courseName: form.value.courseName,
@@ -51,10 +51,15 @@ export class CourseEditComponent implements OnInit {
     }
     if (this.id === '0') {
       CourseMockData.insert(course)
+      this.successMessage = 'Məlumat əlavə edildi';
 
     } else {
       CourseMockData.update(course)
+      this.successMessage = 'Məlumat yeniləndi';
     }
-    this.router.navigateByUrl('/course')
+    setTimeout(() => {
+      this.router.navigateByUrl('/course');
+    }, 1000);
+
   }
 }

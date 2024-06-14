@@ -2,13 +2,7 @@ import {ICourse} from "./ICourse";
 
 export class CourseMockData {
   static mockList: ICourse[] = [
-    {
-      courseCode:'MATH001',
-      courseName:'Matematik',
-      firstName:'Mujgan',
-      lastName:'Qurbanova',
-      class:11
-    }
+
   ];
 
   public static getCourseList(): ICourse[] {

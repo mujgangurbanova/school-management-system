@@ -14,6 +14,7 @@ import {ExamMockData} from "../model/ExamMockData";
 export class ExamEditComponent implements OnInit {
   id?: number;
   title?: string;
+  successMessage:string='';
   exam: IExam = {
     studId: 0,
     courseCode: '',
@@ -39,7 +40,7 @@ export class ExamEditComponent implements OnInit {
 
 
   onSubmit(form: NgForm) {
-
+this.successMessage=''
     let exam: IExam = {
       studId: form.value.studId,
       courseCode: form.value.courseCode,
@@ -50,10 +51,16 @@ export class ExamEditComponent implements OnInit {
     }
     if (this.id === 0) {
       ExamMockData.insert(exam)
+      this.successMessage = 'Məlumat Əlavə edildi';
 
     } else {
       ExamMockData.update(exam)
+      this.successMessage = 'Məlumat yeniləndi';
     }
-    this.router.navigateByUrl('/exam')
+
+    setTimeout(()=>{
+      this.router.navigateByUrl('/exam')
+
+    },1000)
   }
 }

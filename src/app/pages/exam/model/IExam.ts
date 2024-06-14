@@ -1,6 +1,6 @@
 export interface IExam{
   courseCode:string,
   studId:number,
-  tarix:Date,
+  tarix?:Date,
   grade:number
 }
